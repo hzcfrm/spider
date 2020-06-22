@@ -1,6 +1,6 @@
 # -*- coding = Utf-8 -*-
 # @Time : 2020/6/14 12:01
-# @Author : 张嘉焜
+# @Author : 张
 # @File : spider.py
 # @software : PyCharm
 
