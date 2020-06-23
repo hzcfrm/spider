@@ -57,12 +57,13 @@ class Spider():
         return number
 
     def show(self, anchors, num):
-        formats = "{0:^10}\t{1:{3}^10}\t{2:^10}"
-        print(formats.format("排名", "名字", "人数", chr(12288)))
+        formats = "{0:^10}\t{1:^{3}}\t{2:^10}"
+        print(formats.format("排名", "名字", "人数", 20))
         for i in range(num):
             try:
                 u = anchors[i]
-                print(formats.format(str(i + 1), u['name'], u['number'], chr(12288)))
+                l = 20-len(u['name'].encode('GBK'))+len(u['name'])
+                print(formats.format(str(i + 1), u['name'], u['number'], l))
             except:
                 return ''
 
